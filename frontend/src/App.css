@@ -1,0 +1,62 @@
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+
+.app-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.app-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ffdd57;
+}
+
+/* Input and Button */
+.input-section {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.input-section input {
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #2a2a3f;
+  color: white;
+  outline: none;
+  width: 220px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.input-section input:focus {
+  border-color: #ffdd57;
+  box-shadow: 0 0 5px #ffdd57;
+}
+
+.input-section button {
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #00b894, #00cec9);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.input-section button:hover {
+  background: linear-gradient(135deg, #00cec9, #00b894);
+  transform: scale(1.05);
+}

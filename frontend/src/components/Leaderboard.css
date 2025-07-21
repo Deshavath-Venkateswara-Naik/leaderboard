@@ -1,0 +1,138 @@
+.leaderboard-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: #1e1e2f;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ffdd57;
+}
+
+.claim-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.claim-section select,
+.claim-section button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+}
+
+.claim-section select {
+  background: #2a2a3f;
+  color: #fff;
+}
+
+.claim-section button {
+  background-color: #ff4757;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.claim-section button:hover {
+  background-color: #e84118;
+}
+
+.claimed-msg {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #2ecc71;
+}
+
+.top-three {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.top-card {
+  flex: 1;
+  margin: 0 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 12px;
+  background: #2c2c44;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.top-1 { background: #ffeaa7; color: #2d3436; }
+.top-2 { background: #dfe6e9; color: #2d3436; }
+.top-3 { background: #fab1a0; color: #2d3436; }
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px;
+  background: #636e72;
+  color: white;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+.medal {
+  font-size: 1.8rem;
+}
+
+.name {
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.points {
+  font-size: 1.2rem;
+  color: #00cec9;
+}
+
+.other-users {
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+}
+
+.user-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem;
+  background: #2a2a3f;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+}
+
+.user-row .rank,
+.user-row .profile,
+.user-row .username,
+.user-row .user-points {
+  flex: 1;
+  text-align: center;
+}
+
+.user-row .profile {
+  background-color: #555;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin: auto;
+}
+
