@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Leaderboard.css';
 
-const API_URL = 'http://localhost:5000/api/users';
+const API_URL = process.env.REACT_APP_API_URL;
 
 const getLeaderboard = () => axios.get(`${API_URL}/leaderboard`);
 const claimPoints = (userId) => axios.post(`${API_URL}/${userId}/claim`);
 
-const Leaderboard = () => {
+const Leaderboard = ({ refresh }) => {
   const [data, setData] = useState([]);
   const [selectedUser, setSelectedUser] = useState('');
   const [claimedPoints, setClaimedPoints] = useState(null);
@@ -20,7 +20,7 @@ const Leaderboard = () => {
 
   useEffect(() => {
     fetchLeaderboard();
-  }, []);
+  }, [refresh]); // 👈 refresh when App toggles refresh state
 
   const handleClaim = async () => {
     if (!selectedUser) return alert("Please select a user.");
@@ -30,6 +30,7 @@ const Leaderboard = () => {
       fetchLeaderboard();
     } catch (err) {
       console.error('Claim failed:', err);
+      alert("Failed to claim points.");
     }
   };
 
@@ -40,7 +41,6 @@ const Leaderboard = () => {
     <div className="leaderboard-container">
       <h2 className="title">🏆 Live Leaderboard</h2>
 
-      {/* User selection */}
       <div className="claim-section">
         <select onChange={(e) => setSelectedUser(e.target.value)} value={selectedUser}>
           <option value="">🎯 Select a User</option>
@@ -54,7 +54,6 @@ const Leaderboard = () => {
         )}
       </div>
 
-      {/* Top 3 */}
       <div className="top-three">
         {topThree.map((user, i) => (
           <div className={`top-card top-${i + 1}`} key={user._id}>
@@ -66,7 +65,6 @@ const Leaderboard = () => {
         ))}
       </div>
 
-      {/* Others */}
       <div className="other-users">
         {others.map((user, i) => (
           <div className="user-row" key={user._id}>
